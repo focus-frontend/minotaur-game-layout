@@ -80,16 +80,19 @@ select {
 
 @font-face {
   font-family: 'Journal OT';
-  src: url('../fonts/JournalOT.woff') format('woff'),
-    url('../fonts/JournalOT.svg') format('svg'),
-    url('../fonts/JournalOT.eot') format('embedded-opentype');
+  src: url('../fonts/Journal-normal.woff2') format('woff');
   font-weight: normal;
 }
-
 @font-face {
   font-family: 'Journal OT';
-  src: url('../fonts/JournalOT.ttf') format('truetype');
-  font-weight: bold;
+  src: url('../fonts/Journal-italic.woff2') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Journal OT';
+  src: url('../fonts/Journal-bold.woff2') format('woff');
+  font-weight: 600;
 }
 
 h2 {
@@ -98,7 +101,6 @@ h2 {
   font-style: normal;
   font-weight: 600;
   line-height: 78px; /* 100% */
-  letter-spacing: 3px;
   text-transform: uppercase;
 }
 body,
@@ -171,7 +173,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: grid;
   grid-template-columns: 1fr;
 }
 .login::-webkit-scrollbar {
@@ -179,9 +180,10 @@ body {
 }
 .login__content {
   z-index: 10;
-  width: max-content;
+  width: 90%;
+  max-width: 500px;
   position: relative;
-  margin: 20px 0;
+  margin: 5vh auto;
   justify-self: center;
   align-self: center;
 }
@@ -291,9 +293,6 @@ body {
   margin: 23px auto 21px;
 }
 .registration {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: auto;
   position: fixed;
   top: 0;
@@ -475,7 +474,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
   align-items: center;
   padding: 20px 0;
 }
@@ -666,7 +664,7 @@ body {
   height: 100%;
   background-image: url('../images/border.webp');
   background-position: bottom;
-  background-size: contain;
+  background-size: 1440px;
   position: absolute;
   bottom: 0;
   background-repeat: no-repeat;
@@ -779,7 +777,7 @@ body {
   height: 100%;
   background-image: url('../images/border.webp');
   background-position: bottom;
-  background-size: contain;
+  background-size: 1440px;
   position: absolute;
   bottom: 0;
   background-repeat: no-repeat;
@@ -787,7 +785,6 @@ body {
 .reviews h2 {
   padding-left: 60px;
   position: relative;
-  letter-spacing: 5px;
   color: #fff;
 }
 
@@ -877,7 +874,6 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 34px; /* 141.667% */
-  letter-spacing: 1px;
   font-style: italic;
   border: 1px solid #be6d2e;
   box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.5);
@@ -975,7 +971,6 @@ body {
   font-weight: 400;
   line-height: 24px;
   font-style: italic;
-  letter-spacing: 0.5px;
 }
 .bottom {
   z-index: 1;
@@ -993,7 +988,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 }
 .newsletter {
   position: relative;
@@ -1023,7 +1018,6 @@ body {
   font-style: italic;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0.5px;
 }
 .newsletter__form h3 span a {
   text-decoration: underline;
